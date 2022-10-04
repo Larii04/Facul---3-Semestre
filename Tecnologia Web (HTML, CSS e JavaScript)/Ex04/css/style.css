@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+/*Folha de estilo externa desenvolvida por Larissa*/
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 17px;
+}
+        
+h1 {
+    font-size: 30px;
+    color: #240AC8;
+    background-color: #f7f7f7;
+    padding: 5px;
+}
+
+h2 {
+    font-size: 25px;
+    color: #240AC8;
+}
+
+a{
+    color: black;
+}
+
+a:hover {
+    font-weight: bold;
+    color: bisque;
+}
+
+img {
+    float: right;
+    margin-left: 15px;
+    border: 2px solid black;
+}
+
+p {
+    line-height: 25px;
+}
+
+/* ------- Classes -------*/
+.direita{
+    float: right;
+    margin-left: 15px;
+}
+
+.esquerda{
+    float: left;
+    margin-right: 15px;
+}
+
+/* ------- ID -------*/
+#topo{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}

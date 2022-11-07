@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+h1{
+    color: blue;
+}
+
+label{
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+}
+
+input{
+    padding: 10px;
+    border-radius: 7px;
+}
+
+button{
+    font-size: 25px;
+    margin-top: 15px;
+    display: block;
+    color: aliceblue;
+    background-color: blue;
+    border-radius: 5px;
+}
+
+p{
+    font-size: 20px;
+}

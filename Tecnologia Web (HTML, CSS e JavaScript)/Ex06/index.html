@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Web form</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Login</h1>
+
+    <form action="https://professores.unisanta.br/sobrino/scripts/mostra-v2.php" method="get" autocomplete="off"><!--O autocomplete é para definir as opções que aparecem para auto-completar-->
+
+        <p>
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" tabindex="1" disabled><!--O tabindex é para ordenar a ordem dos tabs
+                                                                            O disble ...-->
+        </p>
+
+        <p>
+            <label for="cpf">CPF</label>
+            <input type="text" name="cpf" id="cpf" placeholder="xxx.xxx.xxx-xx" pattern="[0-11]{3}.[0-11]{3}.[0-11]{3}-[0-11]{2}"> <!--O readonly serve apenas para a leitura, impossibilitanto de alterar-->
+        </p>
+
+        <p>
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" required autofocus><!--Para deixar o campo obrigatório
+                                                                            O autofocus é para dar foco em um campo assim que a pág carregar-->
+        </p>
+
+        <p>
+            <label for="telefone">Telefone</label><br>
+            <input type="tel" name="telefone" id="telefone" placeholder="(__)_____-____"><!--Atributo placeholder para colocar máscara-->
+        </p>
+            <label for="cep">CEP</label>
+            <input type="text" name="cep" id="cep" placeholder="_____-___">
+        <p>
+
+        </p>
+
+        <p>
+            <label for="descricao">Descreva o seu problema</label><br>
+            <textarea name="descricao" id="descricao" cols="45" rows="5"></textarea>
+        </p>
+
+        <p>
+            <label for="departamento">Departamento solicitante</label><br>
+            <select name="departamento" id="departamento" required><!--Se usarmos o multiple, podemos selecionar mais de uma opção. Exemplo: <select name="departamento[]" id="departamento" multiple> !!Tem que usar o colchetes no atributo name!!-->
+                <option value="">Selecione a opção...</option><!--Usando o required no select temos que ter um value vazio-->
+                <option value="al">Almoxarifado</option> <!--O value serve para receber o valor da opção para o servidor, já que não vai ser escrito-->
+                <option value="at">Atendimento</option> <!--Se colocarmos o atributo selected é para deixar selecionado tal opção. Exemplo: <option value="at" selected>Atendimento</option>-->
+                <option value="co">Contabilidade</option>
+                <option value="rh">Recursos Humanos</option>
+            </select>
+        </p>
+
+        <p>
+            <fieldset>
+                <legend>Chamada urgente?</legend><!--Nos input -> names iguais, values diferente-->
+                <input type="radio" name="urgente" value="s" id="urgente-s"><label for="urgente-s" required>Sim</label><!--Colocar em um deles-->
+                <input type="radio" name="urgente" value="n" id="urgente-n"><label for="urgente-n">Não</label>
+            </fieldset>
+        </p>
+
+        <p>
+            <fieldset>
+                <legend>Receber retorno por</legend><!--Nos input -> names iguais, values diferente-->
+                <input type="checkbox" name="retorno[]" value="email" id="retorno-e"><label for="retorno-e">E-mail</label>
+                <input type="checkbox" name="retorno[]" value="telefone" id="retorno-t"><label for="retorno-t">Telefone</label>
+                <input type="checkbox" name="retorno[]" value="whats" id="retorno-w"><label for="retorno-w">WhatsApp</label>
+            </fieldset>
+        </p>
+
+        <input type="date" name="data">
+
+        <button>Enviar</button>
+    </form>    
+</body>
+</html>

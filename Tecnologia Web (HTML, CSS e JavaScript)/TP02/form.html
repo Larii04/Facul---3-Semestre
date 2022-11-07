@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Web form</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Web forms</h1>
+
+    <form action="https://professores.unisanta.br/sobrino/scripts/mostra.php" method="post">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome">
+
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email">
+
+        <label for="telefone">Telefone</label>
+        <input type="tel" name="telefone" id="telefone" placeholder="(__)_____-____"><!--Atributo placeholder para colocar máscara-->
+
+        <label for="descricao">Descreva o seu problema</label>
+        <textarea name="descricao" id="descricao" cols="45" rows="5"></textarea>
+
+        <label for="departamento">Departamento solicitante</label>
+        <select name="departamento" id="departamento"><!--Se usarmos o multiple, podemos selecionar mais de uma opção. Exemplo: <select name="departamento[]" id="departamento" multiple> !!Tem que usar o colchetes no atributo name!!-->
+            <option>Selecione a opção...</option>
+            <option value="al">Almoxarifado</option> <!--O value serve para receber o valor da opção para o servidor, já que não vai ser escrito-->
+            <option value="at">Atendimento</option> <!--Se colocarmos o atributo selected é para deixar selecionado tal opção. Exemplo: <option value="at" selected>Atendimento</option>-->
+            <option value="co">Contabilidade</option>
+            <option value="rh">Recursos Humanos</option>
+        </select>
+
+        <fieldset>
+            <legend>Chamada urgente?</legend><!--Nos input -> names iguais, values diferente-->
+            <input type="radio" name="urgente" value="s" id="urgente-s"><label for="urgente-s" class="escolha">Sim</label><!---->
+            <input type="radio" name="urgente" value="n" id="urgente-n"><label for="urgente-n" class="escolha">Não</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Receber retorno por</legend><!--Nos input -> names iguais, values diferente-->
+            <input type="checkbox" name="retorno[]" value="email" id="retorno-e"><label for="retorno-e" class="escolha">E-mail</label>
+            <input type="checkbox" name="retorno[]" value="telefone" id="retorno-t"><label for="retorno-t" class="escolha">Telefone</label>
+            <input type="checkbox" name="retorno[]" value="whats" id="retorno-w"><label for="retorno-w" class="escolha">WhatsApp</label>
+        </fieldset>
+
+        <label for="data">Data de quando ocorreu:</label>
+        <input type="date" name="data" id="data">
+
+        <button>Enviar</button>
+    </form>    
+</body>
+</html>

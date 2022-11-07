@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+label{
+    display: block;
+}
+
+button{
+    margin-top: 15px;
+    display: block;
+}
